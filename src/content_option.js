@@ -1,17 +1,17 @@
-const logotext = "JOHN";
+const logotext = "NITHYA";
 const meta = {
-    title: "John Doe",
-    description: "I’m John Doe data scientist _ Full stack devloper,currently working in Berlin",
+    title: "Nithya Varshini",
+    description: "I’m Nithya, a passionate web developer. I develop web apps . I develop mobile apps.",
 };
 
 const introdata = {
     title: "I’m Nithya",
     animated: {
-        first: "I love coding",
-        second: "I code cool websites",
-        third: "I develop mobile apps",
+        first: "I'm a Web Developer",
+        second: "I'm a Designer",
+        third: "I'm a Mobile App Developer",
     },
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum",
+    description: "I develop web apps . I develop mobile apps.",
     your_img_url: "https://images.unsplash.com/photo-1514790193030-c89d266d5a9d",
 };
 
@@ -147,12 +147,12 @@ const contactConfig = {
 };
 
 const socialprofils = {
-    github: "https://github.com",
+    github: "https://github.com/Nithya-Varshini",
     facebook: "https://facebook.com",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/in/nithya-varshini-m/",
     twitter: "https://twitter.com",
 };
-export default {
+export {
     meta,
     dataabout,
     dataportfolio,
