@@ -9,6 +9,10 @@ import {
   skills,
   services,
 } from "../../content_option";
+import Expertise from "./Expertise.js";
+import Skills from "./Skills.js";
+import Achivements from "./Achivements.js";
+import Experience from "./Experience.js";
 
 export const About = () => {
   return (
@@ -26,16 +30,60 @@ export const About = () => {
           </Col>
         </Row>
         <Row className="sec_sp">
-          <Col lg="5">
-            <h3 className="color_sec py-4">{dataabout.title}</h3>
-          </Col>
-          <Col lg="7" className="d-flex align-items-center">
+          <Col lg="12" className="d-flex align-items-center">
             <div>
               <p>{dataabout.aboutme}</p>
             </div>
           </Col>
         </Row>
-        <Row className=" sec_sp">
+        <Row className="mb-5 mt-3 pt-md-3">
+          <Col lg="8">
+            <h1 className="display-4 mb-4">Expertise</h1>
+            <hr className="t_border my-4 ml-0 text-left" />
+          </Col>
+        </Row>
+        <Expertise />
+        <Row className="mb-5 mt-3 pt-md-3">
+          <Col lg="8">
+            <h1 className="display-4 mb-4">Experiences</h1>
+            <hr className="t_border my-4 ml-0 text-left" />
+          </Col>
+        </Row>
+        <Experience />
+        <Row className="mb-5 mt-3 pt-md-3">
+          <Col lg="8">
+            <h1 className="display-4 mb-4">Skills</h1>
+            <hr className="t_border my-4 ml-0 text-left" />
+          </Col>
+        </Row>
+        <div className="skills1">
+          <Skills skill="React" />
+          <Skills skill="Node" />
+          <Skills skill="Express" />
+          <Skills skill="Mysql" />
+          <Skills skill="MongoDb" />
+          <Skills skill="Git" />
+          <Skills skill="Github" />
+          <Skills skill="Javascript" />
+          <Skills skill="C++" />
+          <Skills skill="Postman" />
+          <Skills skill="Figma" />
+          <Skills skill="Npm" />
+          <Skills skill="Bootstrap" />
+          <Skills skill="Flask" />
+          <Skills skill="Dart" />
+          <Skills skill="Flutter" />
+          <Skills skill="Firebase" />
+          <Skills skill="UiPath" />
+        </div>
+        <Row className="mb-5 mt-3 pt-md-3">
+          <Col lg="8">
+            <h1 className="display-4 mb-4">Achivements</h1>
+            <hr className="t_border my-4 ml-0 text-left" />
+          </Col>
+        </Row>
+        <Achivements />
+        {/* <Row className=" sec_sp">
           <Col lg="5">
             <h3 className="color_sec py-4">Work Timline</h3>
           </Col>
@@ -93,7 +141,7 @@ export const About = () => {
               );
             })}
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     </HelmetProvider>
   );

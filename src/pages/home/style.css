@@ -7,6 +7,7 @@ section {
     transition: all .5s ease-in;
 }
 
+
 .who_am_I {
     font-family: Cinzel;
 }
@@ -40,7 +41,7 @@ section {
 @media (max-width:991.98px) {
     .intro_sec {
         display: block;
-        height: auto!important;
+        height: auto !important;
     }
 }
 
@@ -50,6 +51,7 @@ section {
 }
 
 @media (max-width:991.98px) {
+
     .intro_sec .text,
     .intro_sec .h_bg-image {
         width: 100%;
@@ -70,7 +72,7 @@ section {
 }
 
 .intro_sec .intro .feature .wrap-icon {
-    background: 0 0!important;
+    background: 0 0 !important;
     width: auto;
     height: auto;
     margin-bottom: 0;
@@ -198,6 +200,7 @@ section {
         min-height: 75vh;
         margin-bottom: 30px;
     }
+
     .intro_sec .h_bg-image .block {
         top: unset;
         bottom: 0;
@@ -231,4 +234,36 @@ section {
 
 .intro_sec .h_bg-image {
     filter: saturate(0.5);
+}
+
+.running-text-background {
+    position: fixed;
+    bottom: 10px;
+    /* Lower the position to the bottom */
+    left: 0;
+    width: 200%;
+    /* Increase the width to cover more area */
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: -1;
+    /* Ensure it is behind other content */
+}
+
+.running-text-background span {
+    display: inline-block;
+    font-size: 10rem;
+    /* Very large text */
+    color: rgba(255, 255, 255, 0.1);
+    /* Very translucent text */
+    white-space: nowrap;
+}
+
+.slideText {
+    position: absolute;
+    font-size: 50vh;
+    /* bottom: -120px; */
+    white-space: nowrap;
+    color: #ffffff09;
+    width: 50%;
+    font-weight: bold;
 }

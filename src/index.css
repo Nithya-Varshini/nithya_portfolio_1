@@ -2,7 +2,7 @@
     --bg-color: #501f3a;
     --primary-color: #501f3a;
     --secondary-color: #cccccc;
-    --text-color: #cccccc;
+    --text-color: #cccc;
     --text-color-2: #cccccc;
     --text-color-3: #cb2d6f;
     --overlay-color: rgb(12 12 12 / 63%);
@@ -94,3 +94,5 @@ code {
 .color_sec {
     color: var(--secondary-color);
 }
+
+

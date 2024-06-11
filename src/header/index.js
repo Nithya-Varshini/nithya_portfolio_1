@@ -7,51 +7,50 @@ import { logotext, socialprofils } from "../content_option";
 import Themetoggle from "../components/themetoggle";
 import { useEffect } from "react";
 
-const textVarient = {
-  initial: {
-      x: -500,
-      opacity: 0,
-  },
-  animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-          duration: 1,
-          staggerChildren: 0.1
-      }
-  }
-}
+// const textVarient = {
+//   initial: {
+//       x: -500,
+//       opacity: 0,
+//   },
+//   animate: {
+//       x: 0,
+//       opacity: 1,
+//       transition: {
+//           duration: 1,
+//           staggerChildren: 0.1
+//       }
+//   }
+// }
 
-const imgVarient = {
-  initial: {
-      x: 500,
-      opacity: 0,
-  },
-  animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-          duration: 1,
-          staggerChildren: 0.1
-      }
-  }
+// const imgVarient = {
+//   initial: {
+//       x: 500,
+//       opacity: 0,
+//   },
+//   animate: {
+//       x: 0,
+//       opacity: 1,
+//       transition: {
+//           duration: 1,
+//           staggerChildren: 0.1
+//       }
+//   }
 
-};
+// };
 
-const sliderVariant = {
-  initial: {
-    x: "0%",
-  },
-  animate: {
-    x: "-400%",
-    transition: {
-      repeat: Infinity,
-      duration: 10, // Duration to control speed
-      ease: "linear",
-    }
-  }
-};
-
+// const sliderVariant = {
+//   initial: {
+//     x: "0%",
+//   },
+//   animate: {
+//     x: "-400%",
+//     transition: {
+//       repeat: Infinity,
+//       duration: 10, // Duration to control speed
+//       ease: "linear",
+//     }
+//   }
+// };
 
 const Headermain = () => {
   const [isActive, setActive] = useState("false");
@@ -61,46 +60,46 @@ const Headermain = () => {
     document.body.classList.toggle("ovhidden");
   };
 
-  const [loopNum, setLoopNum] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
-    const [text, setText] = useState('');
-    const [delta, setDelta] = useState(1);
-    const [index, setIndex] = useState(1);
-    const toRotate = ["Pen Tester", "Flutter Developer", "Web Developer", "UI Designer"];
-    const period = 2000;
+  // const [loopNum, setLoopNum] = useState(0);
+  //   const [isDeleting, setIsDeleting] = useState(false);
+  //   const [text, setText] = useState('');
+  //   const [delta, setDelta] = useState(1);
+  //   const [index, setIndex] = useState(1);
+  //   const toRotate = ["Pen Tester", "Flutter Developer", "Web Developer", "UI Designer"];
+  //   const period = 2000;
 
-    useEffect(() => {
-        let ticker = setInterval(() => {
-            tick();
-        }, delta);
+  //   useEffect(() => {
+  //       let ticker = setInterval(() => {
+  //           tick();
+  //       }, delta);
 
-        return () => { clearInterval(ticker) };
-    }, [text])
+  //       return () => { clearInterval(ticker) };
+  //   }, [text])
 
-    const tick = () => {
-        let i = loopNum % toRotate.length;
-        let fullText = toRotate[i];
-        let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+  //   const tick = () => {
+  //       let i = loopNum % toRotate.length;
+  //       let fullText = toRotate[i];
+  //       let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
 
-        setText(updatedText);
+  //       setText(updatedText);
 
-        if (isDeleting) {
-            setDelta(prevDelta => prevDelta / 2);
-        }
+  //       if (isDeleting) {
+  //           setDelta(prevDelta => prevDelta / 2);
+  //       }
 
-        if (!isDeleting && updatedText === fullText) {
-            setIsDeleting(true);
-            setIndex(prevIndex => prevIndex - 1);
-            setDelta(period);
-        } else if (isDeleting && updatedText === '') {
-            setIsDeleting(false);
-            setLoopNum(loopNum + 1);
-            setIndex(1);
-            setDelta(500);
-        } else {
-            setIndex(prevIndex => prevIndex + 1);
-        }
-    }
+  //       if (!isDeleting && updatedText === fullText) {
+  //           setIsDeleting(true);
+  //           setIndex(prevIndex => prevIndex - 1);
+  //           setDelta(period);
+  //       } else if (isDeleting && updatedText === '') {
+  //           setIsDeleting(false);
+  //           setLoopNum(loopNum + 1);
+  //           setIndex(1);
+  //           setDelta(500);
+  //       } else {
+  //           setIndex(prevIndex => prevIndex + 1);
+  //       }
+  //   }
 
   return (
     <>
@@ -128,7 +127,11 @@ const Headermain = () => {
                     </Link>
                   </li>
                   <li className="menu_item">
-                    <Link onClick={handleToggle} to="/portfolio" className="my-3">
+                    <Link
+                      onClick={handleToggle}
+                      to="/portfolio"
+                      className="my-3"
+                    >
                       Portfolio
                     </Link>
                   </li>
@@ -159,13 +162,13 @@ const Headermain = () => {
       <div className="br-bottom"></div>
       <div className="br-left"></div>
       <div className="br-right"></div>
-      
-      <motion.div className='slideText d-flex'
+
+      {/* <motion.div className='slideText d-flex'
         variants={sliderVariant}
         initial="initial"
         animate="animate">
         WEB DEV-FLUTTER DEV-UX/UI DESIGNER
-      </motion.div>
+      </motion.div> */}
     </>
   );
 };
